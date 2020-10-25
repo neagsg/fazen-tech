@@ -1,12 +1,18 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { StatusBar } from 'react-native';
+import Home from './screens/Home';
 
 const App = () => {
   return (
-    <View>
-      <Text>FazenTECH</Text>
-    </View>
+    <>
+      <StatusBar
+        barStyle="dark-content"
+        backgroundColor="transparent"
+        translucent
+      />
+      <Home />
+    </>
   );
-}
+};
 
 export default App;
