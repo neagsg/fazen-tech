@@ -10,7 +10,9 @@ export const Container = styled.View`
 
 export const Logo = styled.Image.attrs({
   source: logoImg,
-})``;
+})`
+  margin-bottom: 24px;
+`;
 
 export const Wrapper = styled.View`
   flex: 1;
@@ -19,6 +21,7 @@ export const Wrapper = styled.View`
 export const Content = styled.View`
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   margin: 0 16px;
   padding: 16px;
   background-color: #fff;
@@ -30,18 +33,27 @@ export const Content = styled.View`
 export const ProductImage = styled.Image.attrs({
   // resizeMode: 'contain',
 })`
-  height: 92px;
-  width: 92px;
-  border-radius: 48px;
+  height: 74px;
+  width: 74px;
+  border-radius: 37px;
+`;
+
+export const Items = styled.View`
+  flex-direction: row;
+  align-items: center;
 `;
 
 export const ProductInfo = styled.View`
   margin-left: 16px;
+  flex-direction: column;
 `;
 
 export const Title = styled.Text`
-  font-size: 16px;
+  font-size: 22px;
+  color: #576574;
+  padding-bottom: 4px;
 `;
 export const Price = styled.Text`
   font-size: 16px;
+  color: #8395a7;
 `;

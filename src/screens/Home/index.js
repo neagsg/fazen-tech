@@ -1,11 +1,13 @@
 import React from 'react';
 import { ScrollView } from 'react-native';
+import Icon from 'react-native-vector-icons/Feather';
 import {
   Container,
   Logo,
   Wrapper,
   Content,
   ProductImage,
+  Items,
   ProductInfo,
   Title,
   Price,
@@ -16,16 +18,19 @@ import api from '../../services/fakeApi';
 const Home = () => {
   return (
     <Container>
-      <Logo />
       <Wrapper>
         <ScrollView showsVerticalScrollIndicator={false}>
+          <Logo />
           {api.map((product) => (
             <Content key={product.id}>
-              <ProductImage source={product.image} />
-              <ProductInfo>
-                <Title>{product.title}</Title>
-                <Price>{product.price}</Price>
-              </ProductInfo>
+              <Items>
+                <ProductImage source={product.image} />
+                <ProductInfo>
+                  <Title>{product.title}</Title>
+                  <Price>{product.price}</Price>
+                </ProductInfo>
+              </Items>
+              <Icon name="chevron-right" size={22} color="#777" />
             </Content>
           ))}
         </ScrollView>
