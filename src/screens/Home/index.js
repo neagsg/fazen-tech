@@ -15,14 +15,20 @@ import {
 
 import api from '../../services/fakeApi';
 
-const Home = () => {
+const Home = ({ navigation }) => {
+  function handleProductInfo(product) {
+    navigation.navigate('ProductInfo', { product });
+  }
   return (
     <Container>
       <Wrapper>
         <ScrollView showsVerticalScrollIndicator={false}>
           <Logo />
           {api.map((product) => (
-            <Content key={product.id}>
+            <Content
+              key={product.id}
+              onPress={() => handleProductInfo(product)}
+              activeOpacity={0.7}>
               <Items>
                 <ProductImage source={product.image} />
                 <ProductInfo>

@@ -18,7 +18,7 @@ export const Wrapper = styled.View`
   flex: 1;
 `;
 
-export const Content = styled.View`
+export const Content = styled.TouchableOpacity`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
@@ -30,17 +30,17 @@ export const Content = styled.View`
   border-radius: 4px;
 `;
 
+export const Items = styled.View`
+  flex-direction: row;
+  align-items: center;
+`;
+
 export const ProductImage = styled.Image.attrs({
   // resizeMode: 'contain',
 })`
   height: 74px;
   width: 74px;
   border-radius: 37px;
-`;
-
-export const Items = styled.View`
-  flex-direction: row;
-  align-items: center;
 `;
 
 export const ProductInfo = styled.View`
