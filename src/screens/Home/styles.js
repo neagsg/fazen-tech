@@ -5,7 +5,7 @@ import logoImg from '../../assets/images/logo.png';
 export const Container = styled.View`
   flex: 1;
   margin: 24px 0 0 8px;
-  background-color: #f5f5f0;
+  background-color: #f1f1f0;
 `;
 
 export const Logo = styled.Image.attrs({
