@@ -2,10 +2,10 @@ import React from 'react';
 import Icon from 'react-native-vector-icons/Feather';
 import { Cart, Count } from './styles';
 
-const HeaderCart = () => {
+const HeaderCart = ({ counter }) => {
   return (
     <Cart>
-      <Count>5</Count>
+      <Count>{counter}</Count>
       <Icon name="shopping-cart" size={22} color="#fff" />
     </Cart>
   );

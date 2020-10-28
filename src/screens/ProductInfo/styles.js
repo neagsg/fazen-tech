@@ -4,12 +4,28 @@ export const Container = styled.View`
   flex: 1;
 `;
 
+export const Header = styled.View`
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1dd1a1;
+  width: 100%;
+  height: 82px;
+  padding: 16px;
+`;
+
+export const BackButton = styled.TouchableOpacity``;
+
+export const HeaderTitle = styled.Text`
+  color: #fff;
+  font-size: 32px;
+  font-weight: bold;
+`;
+
 export const Wrapper = styled.View`
   flex: 1;
-  /* justify-content: center; */
   align-items: center;
   position: relative;
-  /* background-color: #1dd1ff; */
 `;
 
 export const ProductImage = styled.Image`
@@ -27,6 +43,7 @@ export const Price = styled.Text`
 
 export const AddToCart = styled.TouchableOpacity`
   position: absolute;
+  align-items: center;
   background-color: #1dd1a1;
   flex-direction: row;
   padding: 16px 22px;
