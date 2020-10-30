@@ -4,6 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import Home from './screens/Home';
 import ProductInfo from './screens/ProductInfo';
+import SignIn from './screens/SignIn';
 // import HeaderCart from './components/HeaderCart';
 
 const Stack = createStackNavigator();
@@ -11,7 +12,7 @@ const Stack = createStackNavigator();
 const Routes = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator initialRouteName="SignIn">
         <Stack.Screen
           options={{ headerShown: false }}
           name="Home"
@@ -29,6 +30,11 @@ const Routes = () => {
           // }}
           name="ProductInfo"
           component={ProductInfo}
+        />
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="SignIn"
+          component={SignIn}
         />
       </Stack.Navigator>
     </NavigationContainer>
