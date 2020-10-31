@@ -14,6 +14,7 @@ import {
 } from './styles';
 
 import api from '../../services/fakeApi';
+import Header from '../../components/Header';
 
 const Home = ({ navigation }) => {
   function handleProductInfo(product) {
@@ -21,6 +22,7 @@ const Home = ({ navigation }) => {
   }
   return (
     <Container>
+      <Header title="Lista de produtos" />
       <Wrapper>
         <ScrollView showsVerticalScrollIndicator={false}>
           <Logo />

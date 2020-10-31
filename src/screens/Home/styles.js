@@ -4,7 +4,6 @@ import logoImg from '../../assets/images/logo.png';
 
 export const Container = styled.View`
   flex: 1;
-  margin: 24px 0 0 8px;
   background-color: #f1f1f0;
 `;
 
@@ -16,6 +15,7 @@ export const Logo = styled.Image.attrs({
 
 export const Wrapper = styled.View`
   flex: 1;
+  margin: 24px 0 0 8px;
 `;
 
 export const Content = styled.TouchableOpacity`
