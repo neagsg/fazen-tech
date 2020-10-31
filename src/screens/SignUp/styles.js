@@ -49,12 +49,10 @@ export const TextSubmit = styled.Text`
   text-align: center;
 `;
 
-export const SignUp = styled.TouchableOpacity`
-  margin-top: 44px;
-`;
 export const NextPage = styled.TouchableOpacity`
   margin-top: 44px;
 `;
+
 export const TitleButton = styled.Text`
   color: #1dd1a1;
   font-size: 18px;

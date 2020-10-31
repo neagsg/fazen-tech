@@ -5,7 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Home from './screens/Home';
 import ProductInfo from './screens/ProductInfo';
 import SignIn from './screens/SignIn';
-// import HeaderCart from './components/HeaderCart';
+import SignUp from './screens/SignUp';
 
 const Stack = createStackNavigator();
 
@@ -20,14 +20,6 @@ const Routes = () => {
         />
         <Stack.Screen
           options={{ headerShown: false }}
-          // options={{
-          //   title: 'Produto',
-          //   // headerRight: () => <HeaderCart />,
-          //   headerStyle: {
-          //     backgroundColor: '#1dd1a1',
-          //   },
-          //   headerTintColor: '#fff',
-          // }}
           name="ProductInfo"
           component={ProductInfo}
         />
@@ -35,6 +27,11 @@ const Routes = () => {
           options={{ headerShown: false }}
           name="SignIn"
           component={SignIn}
+        />
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="SignUp"
+          component={SignUp}
         />
       </Stack.Navigator>
     </NavigationContainer>
