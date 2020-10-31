@@ -35,10 +35,20 @@ export const ProductImage = styled.Image`
 
 export const Title = styled.Text`
   font-size: 64px;
+  color: #34495e;
+  margin: 8px 0;
 `;
 
 export const Price = styled.Text`
   font-size: 32px;
+  color: #576574;
+`;
+
+export const Description = styled.Text`
+  font-size: 18px;
+  color: #576574;
+  margin: 22px 16px;
+  line-height: 32px;
 `;
 
 export const AddToCart = styled.TouchableOpacity`

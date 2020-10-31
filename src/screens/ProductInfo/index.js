@@ -10,6 +10,7 @@ import {
   ProductImage,
   Title,
   Price,
+  Description,
   AddToCart,
   AddToCartTitle,
 } from './styles';
@@ -37,6 +38,7 @@ const ProductInfo = ({ route, navigation }) => {
         <ProductImage source={product.image} />
         <Title>{product.title}</Title>
         <Price>{product.price}</Price>
+        <Description>{product.description}</Description>
         <AddToCart onPress={handleCount}>
           <Icon name="shopping-cart" size={22} color="#fff" />
           <AddToCartTitle>ADICIONAR AO CARRINHO</AddToCartTitle>
