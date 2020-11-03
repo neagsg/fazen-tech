@@ -51,14 +51,19 @@ export const Description = styled.Text`
   line-height: 32px;
 `;
 
-export const AddToCart = styled.TouchableOpacity`
+export const ActionButton = styled.View`
   position: absolute;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
+  bottom: 20px;
+`;
+
+export const AddToCart = styled.TouchableOpacity`
   background-color: #1dd1a1;
   flex-direction: row;
   padding: 16px 22px;
   border-radius: 8px;
-  bottom: 20px;
 `;
 
 export const AddToCartTitle = styled.Text`
@@ -66,4 +71,14 @@ export const AddToCartTitle = styled.Text`
   font-size: 22px;
   font-weight: 700;
   margin-left: 8px;
+`;
+
+export const SendEmail = styled.TouchableOpacity`
+  align-items: center;
+  justify-content: center;
+  background-color: #1dd1a1;
+  height: 52px;
+  width: 52px;
+  border-radius: 26px;
+  margin-left: 16px;
 `;

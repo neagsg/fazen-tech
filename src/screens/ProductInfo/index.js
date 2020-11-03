@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Icon from 'react-native-vector-icons/Feather';
+import IconMI from 'react-native-vector-icons/MaterialIcons';
 import HeaderCart from '../../components/HeaderCart';
+import { sendEmail } from '../../utils/sendEmail';
 import {
   Container,
   Header,
@@ -13,6 +15,8 @@ import {
   Description,
   AddToCart,
   AddToCartTitle,
+  SendEmail,
+  ActionButton,
 } from './styles';
 
 const ProductInfo = ({ route, navigation }) => {
@@ -25,6 +29,7 @@ const ProductInfo = ({ route, navigation }) => {
 
     setCount(count + addValue);
   }
+
   return (
     <Container>
       <Header>
@@ -39,10 +44,24 @@ const ProductInfo = ({ route, navigation }) => {
         <Title>{product.title}</Title>
         <Price>{product.price}</Price>
         <Description>{product.description}</Description>
-        <AddToCart onPress={handleCount}>
-          <Icon name="shopping-cart" size={22} color="#fff" />
-          <AddToCartTitle>ADICIONAR AO CARRINHO</AddToCartTitle>
-        </AddToCart>
+        <ActionButton>
+          <AddToCart onPress={handleCount}>
+            <Icon name="shopping-cart" size={22} color="#fff" />
+            <AddToCartTitle>ADICIONAR AO CARRINHO</AddToCartTitle>
+          </AddToCart>
+          <SendEmail
+            onPress={() =>
+              sendEmail('test@gmail.com', product.title, [
+                count,
+                product.price,
+                product.description,
+              ]).then(() => {
+                console.log('Our email successful provided to device mail ');
+              })
+            }>
+            <IconMI name="send" size={22} color="#fff" />
+          </SendEmail>
+        </ActionButton>
       </Wrapper>
     </Container>
   );
